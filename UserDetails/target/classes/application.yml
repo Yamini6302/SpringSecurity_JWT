@@ -1,0 +1,26 @@
+# Server Configuration
+server:
+  port: 8089 # Set the server port
+
+# Spring Data Source Configuration
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb # In-memory H2 database
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true # Enable H2 console for easy access
+
+  jpa:
+    hibernate:
+      ddl-auto: update # Automatically create/update database schema
+    show-sql: true # Show SQL queries in logs
+
+# Logging Configuration (Optional)
+logging:
+  level:
+    org.springframework: INFO # Set logging level for Spring framework
+    com.ust.Security: DEBUG # Set logging level for your application package
+
